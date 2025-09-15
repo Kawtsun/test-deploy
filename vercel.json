@@ -3,7 +3,7 @@
   "builds": [
     {
       "src": "public/index.php",
-      "use": "vercel-php@0.7.4"
+      "use": "vercel-php@2.0.2"
     }
   ],
   "routes": [
@@ -16,6 +16,10 @@
       "dest": "/public/storage/$1"
     },
     {
+      "src": "/favicon.ico",
+      "dest": "/public/favicon.ico"
+    },
+    {
       "src": "/(.*)",
       "dest": "/public/index.php"
     }
@@ -23,7 +27,7 @@
   "env": {
     "APP_ENV": "production",
     "APP_DEBUG": "false",
-    "APP_URL": "https://effipay-test.vercel.app",
+    "APP_URL": "https://effipay-test.vercel.app", 
     "APP_CONFIG_CACHE": "/tmp/config.php",
     "APP_EVENTS_CACHE": "/tmp/events.php",
     "APP_PACKAGES_CACHE": "/tmp/packages.php",
